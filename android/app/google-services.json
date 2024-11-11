@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "177330646050",
+    "project_id": "worldnewsapp-fe630",
+    "storage_bucket": "worldnewsapp-fe630.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177330646050:android:d9e6353ae460e79b1c6e7b",
+        "android_client_info": {
+          "package_name": "com.yourdomain.worldnewsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClF5cLMgwyAIYQhK9x7ddWc1k3LaarsYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

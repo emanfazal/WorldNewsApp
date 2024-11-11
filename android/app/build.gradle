@@ -1,0 +1,48 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services' // Google services plugin
+    id "kotlin-android" // Kotlin plugin
+    id "dev.flutter.flutter-gradle-plugin" // Flutter plugin
+}
+
+android {
+    namespace = "com.yourdomain.worldnewsapp"
+    compileSdkVersion 34 // Update to your target compileSdk version
+
+    defaultConfig {
+        applicationId = "com.yourdomain.worldnewsapp" // Make sure this matches your Firebase configuration
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17 // Set Java compatibility to 17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17" // Ensure Kotlin JVM target is also 17
+    }
+}
+
+dependencies {
+    // Firebase SDK version using Firebase BoM (Bill of Materials) for consistent versioning
+    implementation platform('com.google.firebase:firebase-bom:32.0.0') // Firebase BOM
+
+    // Firebase dependencies (add these based on what you use, e.g. Firestore, Authentication, etc.)
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // Ensure that the Google Services plugin is applied for Firebase to work
+    implementation 'com.google.firebase:firebase-analytics'
+}
+
+apply plugin: 'com.google.gms.google-services' // Ensure Google services plugin is applied here
